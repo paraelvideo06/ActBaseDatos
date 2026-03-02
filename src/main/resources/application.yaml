@@ -1,3 +1,13 @@
 spring:
-  application:
-    name: ActividadBaseDatos
+  datasource:
+    url: jdbc:mysql://localhost:3306/empresa_it_solutions?serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # Esto crea las tablas si no existen según tus clases Java
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
